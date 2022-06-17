@@ -56,7 +56,7 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@Client.on_message(command(["فيديو", f"vplay@NKQBoT"]) & other_filters)
+@Client.on_message(command(["فيديو", f"vplay"]) & other_filters)
 async def vplay(c: Client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
@@ -106,7 +106,7 @@ async def vplay(c: Client, m: Message):
             try:
                 await user.join_chat(m.chat.username)
             except Exception as e:
-                await m.reply_text(f"**- معليش ما قدر يخش الحساب المساعد بسبب الضغط\n- ارفع عنه القيود او ضيفه بشكل يدوي او اكتب - ميرا ادخلي\n- يوزر الحساب المساعد - @GtttW**")
+                await m.reply_text(f"**- معليش ما قدر يخش الحساب المساعد بسبب الضغط\n- ارفع عنه القيود او ضيفه بشكل يدوي او اكتب - ميرا ادخلي\n- يوزر الحساب المساعد - @MUSIC_NNBOTL**")
                 return
         else:
             try:
@@ -117,7 +117,7 @@ async def vplay(c: Client, m: Message):
                 pass
             except Exception as e:
                 return await m.reply_text(
-                    f"**- معليش ما قدر يخش الحساب المساعد بسبب الضغط\n- ارفع عنه القيود او ضيفه بشكل يدوي او اكتب - ميرا ادخلي\n- يوزر الحساب المساعد - @GtttW**"
+                    f"**- معليش ما قدر يخش الحساب المساعد بسبب الضغط\n- ارفع عنه القيود او ضيفه بشكل يدوي او اكتب - ميرا ادخلي\n- يوزر الحساب المساعد - @MUSIC_NNBOTL**"
                 )
 
     if replied:
@@ -289,7 +289,7 @@ async def vplay(c: Client, m: Message):
                             await m.reply_text(f"🚫 error: `{ep}`")
 
 
-@Client.on_message(command(["مباشر", f"vstream@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["مباشر", f"vstream"]) & other_filters)
 async def vstream(c: Client, m: Message):
     m.reply_to_message
     chat_id = m.chat.id
