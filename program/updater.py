@@ -93,7 +93,7 @@ def updater():
     return bool(changelog)
 
 
-@Client.on_message(command(["update", f"update@NKQBoT"]) & ~filters.edited)
+@Client.on_message(command(["update", f"حدث"]) & ~filters.edited)
 @sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
@@ -106,7 +106,7 @@ async def update_repo(_, message: Message):
         return
     await msg.edit("bot is **up-to-date** with [main](https://github.com/ccc1cic/nqk/tree/main)", disable_web_page_preview=True)
 
-@Client.on_message(command(["رست", f"restart@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["رست", f"restart"]) & ~filters.edited)
 @sudo_users_only
 async def restart_bot(_, message: Message):
     msg = await message.reply("`restarting bot...`")
