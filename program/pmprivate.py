@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 PMSET = True
 pchats = []
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "2042690935").split()))
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5255762610").split()))
 PMPERMIT = getenv("PMPERMIT", "ENABLE")
 
 
