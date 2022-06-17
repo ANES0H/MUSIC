@@ -38,7 +38,7 @@ async def update_admin(client, message):
     )
 
 
-@Client.on_message(command(["تخطي", f"skip@bnm1_bot", "vskip"]) & other_filters)
+@Client.on_message(command(["تخطي", f"skip"]) & other_filters)
 @authorized_users_only
 async def skipp(client, m: Message):
 
@@ -88,7 +88,7 @@ async def skipp(client, m: Message):
             await m.reply(OP)
             
             
-@Client.on_message(filters.command("ريلا الي بعده", [".", ""]) & ~filters.edited)
+@Client.on_message(filters.command("الي بعده", [".", ""]) & ~filters.edited)
 @authorized_users_only
 async def skip(client, m: Message):
 
@@ -139,7 +139,7 @@ async def skip(client, m: Message):
 
 
 
-@Client.on_message(filters.command("ريلا طفيها", [".", ""]) & ~filters.edited)
+@Client.on_message(filters.command("طفيها", [".", ""]) & ~filters.edited)
 @authorized_users_only
 async def stopp(client, m: Message):
     chat_id = m.chat.id
@@ -154,7 +154,7 @@ async def stopp(client, m: Message):
         await m.reply("**يا حلو مافي شي شغال !**")
 
 @Client.on_message(
-    command(["اوكف", f"stop@bnm1_bot", "كافي", f"end@bnm1_bot", "vstop"])
+    command(["اوكف", f"stop", "ايقاف", f"end", "vstop"])
     & other_filters
 )
 @authorized_users_only
@@ -172,7 +172,7 @@ async def stop(client, m: Message):
 
 
 @Client.on_message(
-    command(["مؤقت", f"pause@bnm1_bot", "vpause"]) & other_filters
+    command(["توقت", f"pause", "vpause"]) & other_filters
 )
 @authorized_users_only
 async def pause(client, m: Message):
@@ -181,7 +181,7 @@ async def pause(client, m: Message):
         try:
             await call_py.pause_stream(chat_id)
             await m.reply(
-                "**تم ايقاف التشغيل بشكل مؤقت**\n\n• **لاكمال التشغيل قم بأرسال ↓**\n» /resume"
+                "**تم ايقاف التشغيل بشكل مؤقت**\n\n• **لاكمال التشغيل قم بأرسال ↓**\n» /استئناف"
             )
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
@@ -190,7 +190,7 @@ async def pause(client, m: Message):
 
 
 @Client.on_message(
-    command(["استئناف", f"resume@bnm1_bot", "vresume"]) & other_filters
+    command(["استئناف", f"resume", "vresume"]) & other_filters
 )
 @authorized_users_only
 async def resume(client, m: Message):
@@ -199,7 +199,7 @@ async def resume(client, m: Message):
         try:
             await call_py.resume_stream(chat_id)
             await m.reply(
-                "**تم استئناف التشغيل**\n\n• ** لأيقاف التشغيل مؤقتا ارسل ↓ **\n» /pause"
+                "**تم استئناف التشغيل**\n\n• ** لأيقاف التشغيل مؤقتا ارسل ↓ **\n» /توقف"
             )
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
@@ -208,7 +208,7 @@ async def resume(client, m: Message):
 
 
 @Client.on_message(
-    command(["كتم", f"mute@bnm1_bot", "vmute"]) & other_filters
+    command(["كتم", f"mute", "vmute"]) & other_filters
 )
 @authorized_users_only
 async def mutee(client, m: Message):
@@ -217,14 +217,14 @@ async def mutee(client, m: Message):
         try:
             await call_py.mute_stream(chat_id)
             await m.reply(
-                "**تم كتم الحساب المساعد**\n\n• **لالغاء الكتم ارسل ↓ **\n» /unmute"
+                "**تم كتم الحساب المساعد**\n\n• **لالغاء الكتم ارسل ↓ **\n» /الغاء كتم"
             )
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
         await m.reply(" **هيه مافي شي شغال !!**")
         
-@Client.on_message(filters.command("ريلا اص", [".", ""]) & ~filters.edited)
+@Client.on_message(filters.command("اص", [".", ""]) & ~filters.edited)
 @authorized_users_only
 async def mute(client, m: Message):
     chat_id = m.chat.id
@@ -232,7 +232,7 @@ async def mute(client, m: Message):
         try:
             await call_py.mute_stream(chat_id)
             await m.reply(
-                "**تم كتم الحساب المساعد**\n\n• **لالغاء الكتم ارسل ↓ **\n» /unmute"
+                "**تم كتم الحساب المساعد**\n\n• **لالغاء الكتم ارسل ↓ **\n» /الغاء كتم"
             )
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
@@ -241,7 +241,7 @@ async def mute(client, m: Message):
 
 
 @Client.on_message(
-    command(["الغاء كتم", f"unmute@bnm1_bot", "vunmute"]) & other_filters
+    command(["الغاء كتم", f"unmute", "vunmute"]) & other_filters
 )
 @authorized_users_only
 async def unmute(client, m: Message):
@@ -250,7 +250,7 @@ async def unmute(client, m: Message):
         try:
             await call_py.unmute_stream(chat_id)
             await m.reply(
-                "**تم الغاء الكتم.**\n\n• **لكتمه ارسل ↓ **\n» /mute."
+                "**تم الغاء الكتم.**\n\n• **لكتمه ارسل ↓ **\n» /كتم."
             )
         except Exception as e:
             await m.reply(f"🚫 **خطا:**\n\n`{e}`")
