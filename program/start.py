@@ -62,7 +62,7 @@ async def start_(client: Client, message: Message):
 ▫️ **انا بوت تشغيل الموسيقى في المكالمات الصوتية 🔉** 
 
 ▪️ **يمكن اضافتي الى مجموعتك واستخدام الاوامر للتشغيل ❕*
-▫️ **اضغط على الاوامر في الاسفل 🔻\n▪️للستفسار ارسل رسالة هنا : @GZZZC**
+▫️ **اضغط على الاوامر في الاسفل 🔻\n▪️للستفسار ارسل رسالة هنا : @N_B_1**
 **—  —  —  —  —  —  —  —  —  —**
 """, 
             reply_markup=InlineKeyboardMarkup(
@@ -80,7 +80,7 @@ async def start_(client: Client, message: Message):
                     ],
                     [
                         InlineKeyboardButton(
-                            "‹ قناة السورس ›", url=f"https://t.me/UX4SL"
+                            "‹ قناة السورس ›", url=f"https://t.me/S8Y8S"
                         ),
                         InlineKeyboardButton(
                             "‹ شروحات البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"
@@ -88,7 +88,7 @@ async def start_(client: Client, message: Message):
                     ],
                     [
                         InlineKeyboardButton(
-                            "‹ شراء بوت ›", url=f"https://t.me/QVVV7"
+                            "‹ شراء بوت ›", url=f"https://t.me/N_B_1"
                         )
                     ],
                 ]
@@ -96,7 +96,7 @@ async def start_(client: Client, message: Message):
         )
 
 
-@Client.on_message(command(["بوت", f"help@NKQBoT"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["بوت", f"help"]) & filters.group & ~filters.edited)
 async def cmd_(client: Client, message: Message):
     await message.reply_text(
         f"""**▪️ اهلين عيني {message.from_user.mention()}\n▪️ اسمي القميل لانا**""",
@@ -114,7 +114,7 @@ async def cmd_(client: Client, message: Message):
                     InlineKeyboardButton("", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
-                    InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/UX4SL"),
+                    InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/S8Y8S"),
                     InlineKeyboardButton("‹ شروحات البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"),
                 ],
                 [InlineKeyboardButton("‹ اضفني الى مجموعتك ›", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
@@ -142,7 +142,7 @@ async def ccx_(client: Client, message: Message):
                     InlineKeyboardButton("", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
-                    InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/UX4SL"),
+                    InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/S8Y8S"),
                     InlineKeyboardButton("‹ شروحات البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"),
                 ],
                 [InlineKeyboardButton("‹ اضفني الى مجموعتك ›", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
@@ -155,7 +155,7 @@ async def ccx_(client: Client, message: Message):
     
 @Client.on_message(filters.command("السورس", [".", ""]) & ~filters.edited)
 async def star_(client: Client, message: Message):
-    await message.reply_photo("https://telegra.ph/file/2a570e5771e601de624bc.jpg", caption=f"""MisTiri .\n\n▹￤ لصنع مثل هذا البوت تواصل مع مطور السورس\n\n▹￤[قناة السورس](t.me/UX4SL)\n▹￤[تحديثات السورس](t.me/UX4SL)\n▹￤[مطور السورس](t.me/GZZZC)\n▹￤[مبرمج السورس](t.me/QVVV7)**""", 
+    await message.reply_photo("https://telegra.ph/file/2a570e5771e601de624bc.jpg", caption=f"""MisTiri .\n\n▹￤ لصنع مثل هذا البوت تواصل مع مطور السورس\n\n▹￤[قناة السورس](t.me/S8Y8S)\n▹￤[تحديثات السورس](t.me/N_B_100)\n▹￤[مطور السورس](t.me/N_B_1)**""", 
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -164,7 +164,7 @@ async def star_(client: Client, message: Message):
                             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [   InlineKeyboardButton("‹ قناة السورس ›", url="https://t.me/UX4SL"),
+                [   InlineKeyboardButton("‹ قناة السورس ›", url="https://t.me/S8Y8S"),
                 
                     InlineKeyboardButton("", callback_data="cbcmds"),
                     InlineKeyboardButton("‹ شروحات البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"),
@@ -174,7 +174,7 @@ async def star_(client: Client, message: Message):
                         "‹ مطور البوت ›", url=f"https://t.me/{OWNER_NAME}"
                     ),
                     InlineKeyboardButton(
-                        "‹ شراء بوت ›", url=f"https://t.me/QVVV7"
+                        "‹ شراء بوت ›", url=f"https://t.me/N_B_1"
                     ),
                 ],
                 [
@@ -200,11 +200,11 @@ async def mtor_(client: Client, message: Message):
                 [   InlineKeyboardButton("‹ مطور البوت ›", url=f"https://t.me/{OWNER_NAME}"),
                 
                     InlineKeyboardButton("", callback_data="cbcmds"),
-                    InlineKeyboardButton("", url=f"https://t.me/UX4SL"),
+                    InlineKeyboardButton("", url=f"https://t.me/N_B_100"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹ شراء بوت ›", url=f"https://t.me/QVVV7"
+                        "‹ شراء بوت ›", url=f"https://t.me/N_B_1"
                     ),
                     InlineKeyboardButton(
                         "", url=f"https://t.me/QVVV7"
@@ -1459,7 +1459,7 @@ def searchMusic(c, m):
         word = random.choice(text)
         m.reply(word)
     except Exception as e:
-        m.reply("حدث خطاء راسل المطور\n- @QVVV7")
+        m.reply("حدث خطاء راسل المطور\n- @N_B_1")
 
 
 @Client.on_message(
@@ -1473,8 +1473,8 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/UX4SL"),
-                InlineKeyboardButton("‹ مطور البوت ›", url=f"https://t.me/QVVV7"),
+                InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/S8Y8S"),
+                InlineKeyboardButton("‹ مطور البوت ›", url=f"https://t.me/N_B_1"),
             ]
         ]
     )
@@ -1488,7 +1488,7 @@ async def alive(client: Client, message: Message):
     )
 
 
-@Client.on_message(command(["بنك", f"ping@NKQBoT"]) & ~filters.edited)
+@Client.on_message(command(["بنك", f"ping"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("جاري حساب سرعة البوت...")
@@ -1496,7 +1496,7 @@ async def ping_pong(client: Client, message: Message):
     await m_reply.edit_text("- سرعة البوت \n" f"{delta_ping * 1000:.3f} ms")
 
 
-@Client.on_message(command(["الحاله", f"uptime@NKQBoT"]) & ~filters.edited)
+@Client.on_message(command(["الحاله", f"uptime"]) & ~filters.edited)
 async def get_uptime(client: Client, message: Message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
@@ -1523,7 +1523,7 @@ async def new_chat(c: Client, m: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                "مطور البوت", url=f"https://t.me/GZZZC"
+                                "مطور البوت", url=f"https://t.me/N_B_1"
                             ),
                             InlineKeyboardButton(
                                 "قناة البوت", url=f"https://t.me/{UPDATES_CHANNEL}"
@@ -1542,7 +1542,7 @@ async def new_chat(c: Client, m: Message):
 ########################## new line
 
 
-@Client.on_message(command(["Kstop", f"Kstop@NKQBoT", "تعطيل المميزات"]) & ~filters.edited)
+@Client.on_message(command(["Kstop", f"تعطيل كت", "تعطيل المميزات"]) & ~filters.edited)
 @authorized_users_only
 async def stop_filter(client: Client, message: Message):
     start = time()
@@ -1571,7 +1571,7 @@ async def stop_filterr(client: Client, message: Message):
         f"- اهلين عيني {message.from_user.mention()}\n- ابشر تم تعطيل امر المميزات"
     )
 
-@Client.on_message(command(["Kstart", f"Kstart@NKQBoT"]) & ~filters.edited)
+@Client.on_message(command(["Kstart", f"تفعيل كت"]) & ~filters.edited)
 @authorized_users_only
 async def start_filter(client: Client, message: Message):
     start = time()
