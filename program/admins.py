@@ -24,7 +24,7 @@ bcl = InlineKeyboardMarkup(
 )
 
 
-@Client.on_message(command(["تحديث", f"reload@bnm1_bot"]) & other_filters)
+@Client.on_message(command(["تحديث", f"reload@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
 async def update_admin(client, message):
     global admins
@@ -38,7 +38,7 @@ async def update_admin(client, message):
     )
 
 
-@Client.on_message(command(["تخطي", f"skip"]) & other_filters)
+@Client.on_message(command(["تخطي", f"skip@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
 async def skipp(client, m: Message):
 
@@ -154,7 +154,7 @@ async def stopp(client, m: Message):
         await m.reply("**يا حلو مافي شي شغال !**")
 
 @Client.on_message(
-    command(["اوكف", f"stop", "ايقاف", f"end", "vstop"])
+    command(["stop", f"stop@{BOT_USERNAME}", "ايقاف", f"end@{BOT_USERNAME}", "end"])
     & other_filters
 )
 @authorized_users_only
@@ -172,7 +172,7 @@ async def stop(client, m: Message):
 
 
 @Client.on_message(
-    command(["توقت", f"pause", "vpause"]) & other_filters
+    command(["توقت", f"pause@{BOT_USERNAME}", "pause"]) & other_filters
 )
 @authorized_users_only
 async def pause(client, m: Message):
@@ -190,7 +190,7 @@ async def pause(client, m: Message):
 
 
 @Client.on_message(
-    command(["استئناف", f"resume", "vresume"]) & other_filters
+    command(["استئناف", f"resume@{BOT_USERNAME}", "resume"]) & other_filters
 )
 @authorized_users_only
 async def resume(client, m: Message):
@@ -208,7 +208,7 @@ async def resume(client, m: Message):
 
 
 @Client.on_message(
-    command(["كتم", f"mute", "vmute"]) & other_filters
+    command(["كتم", f"mute@{BOT_USERNAME}", "mute"]) & other_filters
 )
 @authorized_users_only
 async def mutee(client, m: Message):
@@ -241,7 +241,7 @@ async def mute(client, m: Message):
 
 
 @Client.on_message(
-    command(["الغاء كتم", f"unmute", "vunmute"]) & other_filters
+    command(["الغاء كتم", f"unmute@{BOT_USERNAME}", "unmute"]) & other_filters
 )
 @authorized_users_only
 async def unmute(client, m: Message):
