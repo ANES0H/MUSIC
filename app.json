@@ -1,7 +1,7 @@
 {
     "name": "Video x Music Stream Bot",
     "description": "Telegram bot for Streaming Video & Music trought the Telegram Group Video Chat, powered by pytgcalls and pyrogram",
-    "logo": "https://telegra.ph/file/0c2b093b524a1ebc0c417.jpg",
+    "logo": "https://telegra.ph/file/d295b96e5241d077b36f9.jpg",
     "keywords": [
         "pytgcalls",
         "telegram bot",
@@ -9,65 +9,65 @@
         "pyrogram"
     ],
     "website": "https://t.me/levinachannel",
-    "repository": "https://github.com/mafia132/uu",
-    "success_url": "https://t.me/dlwrml",
+    "repository": "https://github.com/ANES0H/MUSIC",
+    "success_url": "https://t.me/N_B_1",
     "env": {
         "API_ID": {
-            "description": "your API_ID from my.telegram.org",
+            "description": "ايبي ايدي حساب تحصله منا.telegram.org",
             "required": true
         },
         "API_HASH": {
-            "description": "your API_HASH from my.telegram.org",
+            "description": "ايبي هاش حسابك تحصله منا.telegram.org",
             "required": true
         },
         "BOT_TOKEN": {
-            "description": "your bot token from @BotFather",
+            "description": "توكن بوتك تحصله منا @BotFather",
             "required": true
         },
         "BOT_USERNAME": {
-            "description": "your bot username from @BotFather",
+            "description": "يوزر بوتك بدون @ تحصله منا@BotFather",
             "required": true
         },
         "BOT_NAME": {
-            "description": "fill with your bot name from @BotFather",
+            "description": "اسم بوتك تكدر تخلي اسم عشوائي @BotFather",
             "required": true
         },
         "ASSISTANT_NAME": {
-            "description": "fill with the assistant username account without @",
+            "description": "يوزر حسابك المساعد بدون @",
             "required": true
         },
         "SESSION_NAME": {
-            "description": "fill with the pyrogram String Session",
+            "description": "كود بايرو تستخرجه منا @StringSessionhack_bot",
             "required": true
             
         },
         "AMR_NAME": {
-            "description": "اسم البوت",
+            "description": "اسم البوت مثلا ميرا او صوفي الجحش",
             "required": true
         },
         "SUDO_USERS": {
-            "description": "list of user ids to be added to sudo member list, or just fill with your id",
+            "description": "ايدي حسابك و الي تريدهم مطورين بالبوت لا تنسه تخلي بين كل ايدي شخصين فراغ اذا ردت تخلي مورين اكثر من واحد",
             "required": true
         },
         "GROUP_SUPPORT": {
-            "description": "if you have group, then fill the group username here without @",
+            "description": "خلي يوزرك هنا بدون @",
             "required": true,
-            "value": "VeezSupportGroup"
+            "value": "N_B_1"
         },
         "UPDATES_CHANNEL": {
-            "description": "if you have channel, then fill the channel username here without @",
+            "description": "خلي يوزر قناتك هنا بدون @",
             "required": true,
-            "value": "levinachannel"
+            "value": "N_B_100"
         },
         "OWNER_NAME": {
-            "description": "fill with your telegram account username without @",
+            "description": "يوزرك المطور بدون @",
             "required": true,
-            "value": "dlwrml"
+            "value": "N_B_1"
         },
         "ALIVE_NAME": {
-            "description": "fill with your telegram account nickname/name",
+            "description": "اسم حسابك خلي هنا",
             "required": true,
-            "value": "Levina"
+            "value": "ANES"
         }
     },
     "addons": [],
