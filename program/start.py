@@ -56,7 +56,7 @@ async def _human_time_duration(seconds):
     return ", ".join(parts)
 
 
-@Client.on_message(command(["start", f"start@NKQBoT"]) & filters.private & ~filters.edited)
+@Client.on_message(command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
         await message.reply_photo("https://telegra.ph/file/0c2b093b524a1ebc0c417.jpg", caption=f"""▪️ **أهـلا بك عزيزي ✋🏼**\n
 ▫️ **انا بوت تشغيل الموسيقى في المكالمات الصوتية 🔉** 
@@ -114,8 +114,8 @@ async def cmd_(client: Client, message: Message):
                     InlineKeyboardButton("", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
-                    InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/S8Y8S"),
-                    InlineKeyboardButton("‹ شروحات البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                    InlineKeyboardButton("‹ قناة الشروحات ›", url=f"https://t.me/N_B_100"),
+                    InlineKeyboardButton("‹ قناه السورس ›", url=f"https://t.me/{UPDATES_CHANNEL}"),
                 ],
                 [InlineKeyboardButton("‹ اضفني الى مجموعتك ›", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             ]
@@ -142,8 +142,8 @@ async def ccx_(client: Client, message: Message):
                     InlineKeyboardButton("", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
-                    InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/S8Y8S"),
-                    InlineKeyboardButton("‹ شروحات البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                    InlineKeyboardButton("‹ قناة الشروحات ›", url=f"https://t.me/N_B_100"),
+                    InlineKeyboardButton("‹ قناه البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"),
                 ],
                 [InlineKeyboardButton("‹ اضفني الى مجموعتك ›", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             ]
@@ -164,10 +164,10 @@ async def star_(client: Client, message: Message):
                             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [   InlineKeyboardButton("‹ قناة السورس ›", url="https://t.me/S8Y8S"),
+                [   InlineKeyboardButton("‹ قناة الشروحات ›", url="https://t.me/N_B_100"),
                 
                     InlineKeyboardButton("", callback_data="cbcmds"),
-                    InlineKeyboardButton("‹ شروحات البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                    InlineKeyboardButton("‹ قناه البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"),
                 ],
                 [
                     InlineKeyboardButton(
@@ -188,7 +188,7 @@ async def star_(client: Client, message: Message):
 
 @Client.on_message(filters.command("المطور", [".", ""]) & ~filters.edited)
 async def mtor_(client: Client, message: Message):
-    await message.reply_photo("https://telegra.ph/file/9ccbd3fca127c985023e6.jpg", caption=f"""▹￤D𝐞𝐯 N𝐞𝐦𝐚 ↬ X : اسكانور\n▹￤D𝐞𝐯 U𝐬𝐞𝐫 ↬ @QVVV7\n▹￤D𝐞𝐯 I𝐝 ↬ ( 2036507188 )\n▹￤D𝐞𝐯 B𝐢𝐨  ..! @GZZZC**""", 
+    await message.reply_photo("https://telegra.ph/file/9ccbd3fca127c985023e6.jpg", caption=f"""▹￤D𝐞𝐯 N𝐞𝐦𝐚 ↬ X : اسكانور\n▹￤D𝐞𝐯 U𝐬𝐞𝐫 ↬ @N_B_1\n▹￤D𝐞𝐯 I𝐝 ↬ ( 5519514436 )\n▹￤D𝐞𝐯 B𝐢𝐨  ..! @S8Y8S**""", 
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -200,14 +200,14 @@ async def mtor_(client: Client, message: Message):
                 [   InlineKeyboardButton("‹ مطور البوت ›", url=f"https://t.me/{OWNER_NAME}"),
                 
                     InlineKeyboardButton("", callback_data="cbcmds"),
-                    InlineKeyboardButton("", url=f"https://t.me/N_B_100"),
+                    InlineKeyboardButton("", url=f"https://t.me/S8Y8S"),
                 ],
                 [
                     InlineKeyboardButton(
                         "‹ شراء بوت ›", url=f"https://t.me/N_B_1"
                     ),
                     InlineKeyboardButton(
-                        "", url=f"https://t.me/QVVV7"
+                        "", url=f"https://t.me/N_B_100"
                     ),
                 ],
                 [
@@ -1463,7 +1463,7 @@ def searchMusic(c, m):
 
 
 @Client.on_message(
-    command(["فحص", f"alive@NKQBoT"]) & filters.group & ~filters.edited
+    command(["فحص", f"alive@{BOT_USERNAME}"]) & filters.group & ~filters.edited
 )
 async def alive(client: Client, message: Message):
     current_time = datetime.utcnow()
@@ -1488,7 +1488,7 @@ async def alive(client: Client, message: Message):
     )
 
 
-@Client.on_message(command(["بنك", f"ping"]) & ~filters.edited)
+@Client.on_message(command(["بنك", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("جاري حساب سرعة البوت...")
@@ -1496,7 +1496,7 @@ async def ping_pong(client: Client, message: Message):
     await m_reply.edit_text("- سرعة البوت \n" f"{delta_ping * 1000:.3f} ms")
 
 
-@Client.on_message(command(["الحاله", f"uptime"]) & ~filters.edited)
+@Client.on_message(command(["الحاله", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
 async def get_uptime(client: Client, message: Message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
@@ -1515,7 +1515,7 @@ async def new_chat(c: Client, m: Message):
     for member in m.new_chat_members:
         if member.id == bot_id:
 
-            alive = f"**اهلين , شكرا لاضافتي عزيزي\n\n- حلو الحين اتبع الخطوات هاذي لتشغيلي ..\n✶ - ارفعني مشرف\n✶ - ارسل /join - لدخول الحساب المساعد\n✶ - اذا ما دخل الحساب المساعد من الامر ضيفه بشكل يدوي عن طريق اضافة اعضاء\n✶ - لرؤية قائمة الاوامر ارسل - /help عزيزي\n✶ - لتحديث قاعدة البيانات ارسل\n - /reload\n استمتعو ❤️,**"
+            alive = f"**اهلين , شكرا لاضافتي عزيزي\n\n- حلو الحين اتبع الخطوات هاذي لتشغيلي ..\n✶ - ارفعني مشرف\n✶ - ارسل /انضم - لدخول الحساب المساعد\n✶ - اذا ما دخل الحساب المساعد من الامر ضيفه بشكل يدوي عن طريق اضافة اعضاء\n✶ - لرؤية قائمة الاوامر ارسل - /الاوامر عزيزي\n✶ - لتحديث قاعدة البيانات ارسل\n - /تحديث\n استمتعو ❤️,**"
             await m.reply_photo(
                 photo=f"{ALIVE_IMG}",
                 caption=alive,
