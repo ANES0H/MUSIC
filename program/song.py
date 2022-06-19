@@ -29,7 +29,7 @@ ydl_opts = {
    # m_reply = await message.reply_text(f"**لبيه {message.from_user.mention()}\n✯ اضغط /help عشان تشوف اوامري**")
     #await m_reply_text("")
 
-@Client.on_message(command(["اغنيه", f"song"]) & ~filters.edited)
+@Client.on_message(command(["بحث", f"song"]) & ~filters.edited)
 def songg(_, message):
     query = " ".join(message.command[1:])
     m = message.reply("**✶ ابشر ثواني بس ..**")
@@ -60,7 +60,7 @@ def songg(_, message):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
         m.edit("**✶ جاري ارسال الملف الصوتي ..**")
-        buttons = [[InlineKeyboardButton("𝗌𝗈𝗎𝗋𝖼𝖾 𝗆as", url="t.me/N_B_100")]]
+        buttons = [[InlineKeyboardButton("𝗌𝗈𝗎𝗋𝖼𝖾 ANES", url="t.me/S8Y8S")]]
         reply_markup = InlineKeyboardMarkup(buttons)
 
         message.reply_audio(
@@ -84,7 +84,7 @@ def songg(_, message):
     except Exception as e:
         print(e)
 
-@Client.on_message(filters.command("بحث", [".", ""]) & ~filters.edited)
+@Client.on_message(filters.command("ابحث", [".", ""]) & ~filters.edited)
 def song(_, message):
     query = " ".join(message.command[1:])
     m = message.reply("**✶ ابشر ثواني بس ..**")
@@ -115,7 +115,7 @@ def song(_, message):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
         m.edit("**✶ جاري ارسال الملف الصوتي ..**")
-        buttons = [[InlineKeyboardButton("𝗌𝗈𝗎𝗋𝖼𝖾 𝗆as", url="t.me/N_B_100")]]
+        buttons = [[InlineKeyboardButton("𝗌𝗈𝗎𝗋𝖼𝖾 ANES", url="t.me/S8Y8S")]]
         reply_markup = InlineKeyboardMarkup(buttons)
 
         message.reply_audio(
