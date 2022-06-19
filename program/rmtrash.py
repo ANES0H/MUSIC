@@ -19,7 +19,7 @@ raw = os.path.realpath(".")
 #stats
 
 
-@Client.on_message(command(["rmd", "clear"]) & ~filters.edited)
+@Client.on_message(command(["تنظيف", "clear"]) & ~filters.edited)
 @errors
 @sudo_users_only
 async def clear_downloads(_, message: Message):
@@ -32,7 +32,7 @@ async def clear_downloads(_, message: Message):
         await message.reply_text("❌ **مافي شي يحتاج التنظيف**")
 
         
-@Client.on_message(command(["rmw", "clean"]) & ~filters.edited)
+@Client.on_message(command(["امسح", "clean"]) & ~filters.edited)
 @errors
 @sudo_users_only
 async def clear_raw(_, message: Message):
