@@ -289,7 +289,7 @@ async def vplay(c: Client, m: Message):
                             await m.reply_text(f"🚫 error: `{ep}`")
 
 
-@Client.on_message(command(["مباشر", f"vstream"]) & other_filters)
+@Client.on_message(command(["بث", f"vstream"]) & other_filters)
 async def vstream(c: Client, m: Message):
     m.reply_to_message
     chat_id = m.chat.id
@@ -373,7 +373,7 @@ async def vstream(c: Client, m: Message):
                 )
             loser = await c.send_message(chat_id, "**جاري المعالجه**")
         else:
-            await m.reply("**/vstream {الوابط} {720/480/360}**")
+            await m.reply("**/vstream {الرابط} {720/480/360}**")
 
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, link)
